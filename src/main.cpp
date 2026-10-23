@@ -206,7 +206,7 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR, int show) {
     wc.hbrBackground = CreateSolidBrush(RGB(10, 15, 29));
     if (!RegisterClassW(&wc)) return 1;
     HWND hwnd = CreateWindowExW(0, wc.lpszClassName, L"AL STUDIO | Beat Lab",
-        WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
+        WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_CLIPCHILDREN,
         CW_USEDEFAULT, CW_USEDEFAULT, 800, 450, nullptr, nullptr, instance, nullptr);
     if (!hwnd) return 2;
     ShowWindow(hwnd, show); UpdateWindow(hwnd);
